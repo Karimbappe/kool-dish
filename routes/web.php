@@ -19,7 +19,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('posts', PostController::class);
+Route::get('/posts', [PostController::class, 'create'])->name('posts.create');
+Route::get('/my-profile', [ProfileController::class, 'show'])->name('profile.my-profile');
+// Route::res('posts', PostController::class);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
