@@ -30,10 +30,9 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::controller(PostController::class)->group(function () {
-    Route::get('/index', 'index');
+    Route::get('/index', 'index')->name('index');
     Route::get('/createpost', 'create');
 });
-
 
 Route::resource('posts', PostController::class);
 require __DIR__ . ('/auth.php');

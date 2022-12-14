@@ -66,9 +66,9 @@ class ProfileController extends Controller
         return Redirect::to('/');
     }
 
-    public function show( Request $request)
+    public function show(Request $request)
     {
-        return view('profile.my-profile', [
+        return view('dashboard', [
             'user' => $request->user()
         ]);
     }
