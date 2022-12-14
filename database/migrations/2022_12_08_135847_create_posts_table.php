@@ -13,15 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-    Schema::create('posts', function (Blueprint $table) {
-        $table->id();
-        $table->text('title');
-        $table->text('description');
-        $table->string('img_url');
-        $table->foreignId('user_id')->constrained()->onDelete('cascade');
-        $table->timestamps();
-    });
-}
+        Schema::create('posts', function (Blueprint $table) {
+            $table->id();
+            $table->string('title');
+            $table->string('picture');
+            $table->text('content');
+            $table->timestamps();
+        });
+    }
 
 
     /**

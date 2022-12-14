@@ -14,14 +14,13 @@ class PostFactory extends Factory
      *
      * @return array<string, mixed>
      */
-    
+
     public function definition()
     {
         return [
-            'title'=>'Die Catze',
-            'description' => "Mon chat est trop mignon",
-            'img_url' => $this->faker->imageUrl(640, 480, 'cats'),
-            'user_id' => 1
+            'title' => 'Die Catze',
+            'content' => "Mon chat est trop mignon",
+            'picture' => $this->faker->imageUrl(640, 480, 'cats'),
         ];
     }
 }

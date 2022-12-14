@@ -19,10 +19,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/posts', [PostController::class, 'create'])->name('posts.create');
-Route::get('/my-profile', [ProfileController::class, 'show'])->name('profile.my-profile');
-// Route::res('posts', PostController::class);
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -33,4 +29,11 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+Route::controller(PostController::class)->group(function () {
+    Route::get('/index', 'index');
+    Route::get('/createpost', 'create');
+});
+
+
+Route::resource('posts', PostController::class);
+require __DIR__ . ('/auth.php');
