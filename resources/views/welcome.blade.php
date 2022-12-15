@@ -92,6 +92,10 @@
         align-items: center
     }
 
+    .item-right {
+        justify-content: right;
+    }
+
     .justify-center {
         justify-content: center
     }
@@ -130,7 +134,7 @@
     }
 
     .ml-1 {
-        margin-left: .25rem
+        margin-left: 1rem
     }
 
     .mt-2 {
@@ -162,7 +166,7 @@
     }
 
     .-mt-px {
-        margin-top: -1px
+        margin-top: 2px
     }
 
     .max-w-6xl {
@@ -193,6 +197,10 @@
 
     .pt-8 {
         padding-top: 2rem
+    }
+
+    .gap-1 {
+        gap: 100rem;
     }
 
     .fixed {
@@ -277,8 +285,8 @@
         width: auto
     }
 
-    .grid-cols-1 {
-        grid-template-columns: repeat(1, minmax(0, 1fr))
+    .grid-cols {
+        grid-template-columns: 30px auto;
     }
 
     @media (min-width:640px) {
