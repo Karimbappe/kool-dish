@@ -3,6 +3,8 @@ KOOL-DISH
 Kool-Dish est une plateforme de micro blogging développé avec PHP Laravel. Il vous permet de découvrir les meilleurs restaurants halal, casher et végétaliens à Paris.
 
 
+stack : HTML, CSS, PHP, Laravel 8
+
 <img width="357" alt="Kooldish" src="https://user-images.githubusercontent.com/78148549/212535651-805641a6-50d1-4b56-8467-1da78201d3a0.png">
 
 
